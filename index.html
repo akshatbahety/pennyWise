@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PennyWise — Wealth, at a glance</title>
+<meta name="description" content="Track your net worth across stocks, crypto, real estate, and more. All data stays in your browser." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231c6a4b'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>P</text></svg>" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<!-- data (plain JS) -->
+<script src="data.js"></script>
+
+<!-- components (JSX) -->
+<script type="text/babel" src="icons.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="pages-dashboard.jsx"></script>
+<script type="text/babel" src="pages-holdings.jsx"></script>
+<script type="text/babel" src="pages-misc.jsx"></script>
+<script type="text/babel" src="page-addasset.jsx"></script>
+<script type="text/babel" src="page-onboarding.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(React.createElement(window.PennyWiseApp));
+</script>
+</body>
+</html>
