@@ -594,6 +594,12 @@ input, select, textarea { font-family: inherit; }
   letter-spacing: -0.03em;
   margin: 0 0 12px;
 }
+.ob-built-by {
+  font-size: 14px;
+  color: var(--ink-400);
+  letter-spacing: 0.02em;
+  margin: 0 0 16px;
+}
 .ob-subtitle {
   font-size: 16px;
   color: var(--ink-500);

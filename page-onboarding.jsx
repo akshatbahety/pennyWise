@@ -38,6 +38,7 @@
           </span>
         </div>
         <h1 className="ob-title">Welcome to Penny<span style={{ color: "var(--orange-600)" }}>Wise</span></h1>
+        <p className="ob-built-by">Built by Akshat with outskill</p>
         <p className="ob-subtitle">Your wealth, at a glance. Track your entire net worth across stocks, crypto, real estate, and more — all in one calm, private dashboard.</p>
         <div className="ob-features">
           <div className="ob-feature">
