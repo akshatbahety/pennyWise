@@ -15,6 +15,7 @@
     { id: "holdings", label: "Holdings", icon: "holdings" },
     { id: "trends", label: "Trends", icon: "trends" },
     { id: "allocation", label: "Allocation", icon: "allocation" },
+    { id: "sip", label: "SIP Calculator", icon: "calculator" },
   ];
 
   const TITLES = {
@@ -22,6 +23,7 @@
     holdings: { t: "Holdings", c: "Every asset you track" },
     trends: { t: "Trends", c: "How your net worth is growing" },
     allocation: { t: "Allocation", c: "Where your money lives" },
+    sip: { t: "SIP Calculator", c: "Plan your systematic investments" },
     settings: { t: "Settings", c: "Currency, language & data" },
     add: { t: "Add asset", c: "Grow your portfolio" },
     class: { t: "", c: "" },
@@ -81,7 +83,7 @@
 
     const PAGE_MAP = {
       dashboard: PAGES.Dashboard, holdings: PAGES.Holdings, trends: PAGES.Trends,
-      allocation: PAGES.Allocation, settings: PAGES.Settings, add: PAGES.AddAsset, class: PAGES.ClassDetail,
+      allocation: PAGES.Allocation, sip: PAGES.SIPCalculator, settings: PAGES.Settings, add: PAGES.AddAsset, class: PAGES.ClassDetail,
     };
     const PageComp = PAGE_MAP[page] || PAGES.Dashboard;
     const Body = window.React.createElement(PageComp, { key: page + ":" + (params.type || params.presetType || (editing && editing.id) || ""), ...ctx });

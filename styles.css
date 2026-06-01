@@ -754,3 +754,118 @@ input, select, textarea { font-family: inherit; }
   .ob-value-input { width: 120px; }
   .ob-asset-row { gap: 10px; }
 }
+
+/* ============================================================
+   SIP Calculator
+   ============================================================ */
+.sip-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 22px;
+  align-items: start;
+}
+.sip-inputs { position: sticky; top: 20px; }
+
+.sip-presets {
+  display: flex; gap: 8px; margin-top: 6px;
+}
+.sip-presets-wide { gap: 6px; }
+.sip-preset-btn {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  font-weight: 600; font-size: 13px; color: var(--ink-700);
+  transition: all 0.14s;
+}
+.sip-preset-btn:hover { border-color: var(--ink-300); background: var(--surface-2); }
+.sip-preset-btn.on {
+  border-color: var(--green-600); background: var(--green-50); color: var(--green-800);
+}
+
+.sip-slider {
+  flex: 1;
+  -webkit-appearance: none; appearance: none;
+  height: 6px; border-radius: 99px;
+  background: var(--line);
+  outline: none;
+}
+.sip-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-600); border: 3px solid #fff;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.sip-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+.sip-slider::-moz-range-thumb {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-600); border: 3px solid #fff;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.sip-rate-badge {
+  min-width: 50px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: var(--r-sm);
+  background: var(--green-50);
+  color: var(--green-800);
+  font-weight: 700; font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sip-stepup-section {
+  margin-top: 8px;
+  padding: 14px 16px;
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--line-soft);
+}
+.sip-toggle-row {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; border: none; background: none; padding: 0; gap: 12px; text-align: left;
+}
+.sip-toggle {
+  width: 44px; height: 24px; border-radius: 99px;
+  background: var(--line);
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.sip-toggle.on { background: var(--green-600); }
+.sip-toggle-knob {
+  position: absolute; top: 3px; left: 3px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #fff; box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+.sip-toggle.on .sip-toggle-knob { transform: translateX(20px); }
+
+.sip-summary-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px; margin-bottom: 18px;
+}
+.sip-summary-card { display: flex; flex-direction: column; gap: 4px; }
+.sip-summary-value { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.sip-summary-total {
+  background: linear-gradient(135deg, var(--green-700), var(--green-900));
+  border-color: var(--green-800);
+}
+
+.sip-donut-row {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 18px; align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .sip-layout { grid-template-columns: 1fr; }
+  .sip-inputs { position: static; }
+  .sip-donut-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .sip-summary-grid { grid-template-columns: 1fr; }
+}
